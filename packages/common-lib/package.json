@@ -1,0 +1,51 @@
+{
+    "name": "@test/common-lib",
+    "version": "0.5.0",
+    "description": "Common library",
+    "private": true,
+    "keywords": [
+        "core"
+    ],
+    "author": "Kib Vindas <kivind@gmail.com>",
+    "homepage": "",
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts",
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "type-check": "tsc --noEmit",
+        "type-check:watch": "npm run type-check -- --watch",
+        "compile": "npm run compile:types && npm run compile:js",
+        "compile:types": "tsc --emitDeclarationOnly",
+        "compile:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+        "lint": "eslint . --ext .jsx,.js,.tsx,ts",
+        "lint:fix": "eslint . --ext .jsx,.js,.tsx,ts --fix",
+        "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|md|vue)\""
+    },
+    "dependencies": {
+        "axios": "^0.18.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.2.0",
+        "@babel/core": "^7.2.0",
+        "@babel/plugin-proposal-class-properties": "^7.2.1",
+        "@babel/plugin-proposal-decorators": "^7.2.2",
+        "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+        "@babel/preset-env": "^7.2.0",
+        "@babel/preset-typescript": "^7.1.0",
+        "@types/node": "^10.12.10",
+        "@typescript-eslint/eslint-plugin": "^2.3.1",
+        "@typescript-eslint/parser": "^2.3.1",
+        "babel-loader": "^8.0.4",
+        "eslint": "^6.4.0",
+        "eslint-config-prettier": "^6.3.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-react": "^7.14.3",
+        "ts-loader": "^5.3.2",
+      "typescript": "^3.4.5"
+    }
+}
