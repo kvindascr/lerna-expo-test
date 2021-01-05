@@ -27,7 +27,7 @@
         "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|md|vue)\""
     },
     "dependencies": {
-        "axios": "^0.18.0"
+        "axios": "^0.21.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.2.0",
